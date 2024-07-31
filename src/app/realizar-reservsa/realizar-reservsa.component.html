@@ -6,40 +6,53 @@
     <title>Document</title>
 </head>
 <body>
+
+  <div class="bg-image" style="background: url('assets/images/mejores.jpg'); 
+      background-size: cover; position: center; background-attachment: fixed; position: absolute; 
+      top: 0; left: 0; width: 100%; height: 100vh; margin: 0; padding: 0; overflow: hidden; z-index: -1;">
+  </div>
+
+  <h1>Realizar Reserva</h1> 
+
     <form>
-      <label for="usuario">Usuario</label>
-      <select class="form-select" #id_usuario name="user_id" aria-label="Default select example">
-        <option selected>Usuario</option>
-
-        @for (item of use; track $index) {
-        <option value="{{item.id_usuario}}">{{item.name}}</option>
-        }
-      </select>
-
-    <br>
-
-      <label for="usuario">Restaurante</label>
-      <select class="form-select" #id_restaurante name="user_id" aria-label="Default select example">
-        <option selected>Restaurante</option>
-
-        @for (item of res; track $index) {
-        <option value="{{item.id_restaurante}}">{{item.nombre}}</option>
-        }
-      </select>
-
-        <div>
+      <div class="form-group">
+          <label for="usuario">Usuario</label>
+          <select class="form-select"  #id_usuario id="id_usuario" name="user_id" aria-label="Usuario">
+              <option selected>Selecciona un usuario</option>
+              @for (item of use; track $index) {
+                <option value="{{item.id_usuario}}">{{item.name}}</option>
+                }
+          </select>
+      </div>
+  
+      <div class="form-group">
+          <label for="restaurante">Restaurante</label>
+          <select class="form-select" #id_restaurante id="id_restaurante" name="restaurante_id" aria-label="Restaurante">
+              <option selected>Selecciona un restaurante</option>
+              @for (item of res; track $index) {
+                <option value="{{item.id_restaurante}}">{{item.nombre}}</option>
+                }
+          </select>
+      </div>
+  
+      <div class="form-group">
           <label for="fecha">Fecha:</label>
-          <input type="date" #fecha_reserva formControlName="fecha" id="fecha" required>
-        </div>
-        <div>
+          <input type="date"  #fecha_reserva id="fecha" name="fecha" required>
+      </div>
+  
+      <div class="form-group">
           <label for="hora">Hora:</label>
-          <input type="time" #hora_reserva formControlName="hora" id="hora" required>
-        </div>
-        <div>
+          <input type="time" #hora_reserva id="hora" name="hora" required>
+      </div>
+  
+      <div class="form-group">
           <label for="numeroPersonas">Número de personas:</label>
-          <input type="number" #numero_personas formControlName="numeroPersonas" id="numeroPersonas" min="1" required>
-        </div>
-        <button type="button" (click)="crearReserva(id_usuario, id_restaurante, fecha_reserva, hora_reserva, numero_personas)">Reservar</button>
-    </form>  
+          <input type="number" #numero_personas id="numeroPersonas" name="numeroPersonas" min="1" required>
+      </div>
+  
+      <button type="button" onclick="crearReserva(id_usuario, id_restaurante, fecha_reserva, hora_reserva, numero_personas)">Reservar</button>
+  </form>
+  
+
 </body>
 </html>

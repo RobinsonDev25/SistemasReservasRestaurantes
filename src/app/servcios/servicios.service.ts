@@ -50,7 +50,7 @@ export class ServiciosService {
   }
 
   deleteReserva(id:any){
-    return this.http.delete('http://127.0.0.1:3000/api/reservas/'+{id})
+    return this.http.delete('http://127.0.0.1:3000/api/reservas/'+id)
   }
 
  
