@@ -1,1 +1,58 @@
-<p>registro works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <title>FORMULARIO DE REGISTRO E INICIO SESIÓN</title>
+</head>
+<body>
+
+    <div class="bg-image" style="background: url('assets/images/hotel.jpg'); 
+      background-size: cover; background-position: center; background-attachment: fixed; position: absolute; 
+      top: 0; left: 0; width: 100%; height: 100vh; margin: 0; padding: 0; overflow: hidden; z-index: -1;">
+    </div>
+
+    <div class="container-form register">
+        <div class="information">
+            <div class="info-childs">
+                <h2>Bienvenido</h2>
+                <p>Para unirte al sistema de reservas de restaurantes por favor crea una cuenta con tus datos</p>
+            </div>
+        </div>
+        <div class="form-information">
+            <div class="form-information-childs">
+                <h2>Crear una Cuenta</h2>
+                <form class="form form-register" novalidate>
+                    <div>
+                        <label>
+                            <i class='bx bx-user' ></i>
+                            <input type="text" #name placeholder="Nombre Usuario" name="userName" >
+                        </label>
+                    </div>
+                    <div>
+                        <label >
+                            <i class='bx bx-envelope' ></i>
+                            <input type="email" #email placeholder="Email" name="userEmail" >
+                        </label>
+                    </div>
+                   <div>
+                        <label>
+                            <i class='bx bx-lock-alt' ></i>
+                            <input type="password" #password placeholder="Contraseña" name="userPassword">
+                        </label>
+                   </div>
+                
+                    <button type="submit" (click)="register(name, email, password)">Registrase</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

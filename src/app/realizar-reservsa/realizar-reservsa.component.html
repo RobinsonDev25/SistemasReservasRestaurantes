@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <div>
+          <label for="fecha">Fecha:</label>
+          <input type="date" formControlName="fecha" id="fecha" required>
+        </div>
+        <div>
+          <label for="hora">Hora:</label>
+          <input type="time" formControlName="hora" id="hora" required>
+        </div>
+        <div>
+          <label for="numeroPersonas">Número de personas:</label>
+          <input type="number" formControlName="numeroPersonas" id="numeroPersonas" min="1" required>
+        </div>
+        <button type="submit" >Reservar</button>
+    </form>  
+</body>
+</html>

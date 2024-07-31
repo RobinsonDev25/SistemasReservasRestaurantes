@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar a la Derecha</title>
+    
+</head>
+<body>
+    <div class="navbar">
+        <a href="gestionar">Reservas</a>
+        <a href="home">Home</a>
+    </div>
+
+    <h1>Restaurantes Disponibles</h1>
+
+
+    @for (item of datos; track $index) {
+        <div  class="card">
+            <div>Restaurante: {{item.nombre}}</div>
+            <div>Direccion: {{item.direccion}}</div>
+        </div>
+    }
+
+</body>
+</html>
