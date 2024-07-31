@@ -1,0 +1,40 @@
+
+  thead {
+    background-color: #b3e5fc; /* Celeste claro */
+  }
+
+  /* Estilos para las celdas del cuerpo de la tabla */
+  tbody td {
+    background-color: #e1f5fe; /* Celeste más suave */
+  }
+
+  /* Estilos para los botones dentro de la tabla */
+  button {
+    background-color: #03a9f4; /* Celeste intenso */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  /* Estilo para el botón al pasar el mouse */
+  button:hover {
+    background-color: #0288d1; /* Un celeste más oscuro */
+  }
+
+  /* Estilos generales para la tabla */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+
+  /* Estilo para el borde de las celdas de la tabla */
+  th, td {
+    border-bottom: 1px solid #ddd; /* Línea sutil */
+  }

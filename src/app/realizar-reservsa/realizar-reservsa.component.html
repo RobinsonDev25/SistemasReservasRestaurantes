@@ -7,19 +7,39 @@
 </head>
 <body>
     <form>
+      <label for="usuario">Usuario</label>
+      <select class="form-select" #id_usuario name="user_id" aria-label="Default select example">
+        <option selected>Usuario</option>
+
+        @for (item of use; track $index) {
+        <option value="{{item.id_usuario}}">{{item.name}}</option>
+        }
+      </select>
+
+    <br>
+
+      <label for="usuario">Restaurante</label>
+      <select class="form-select" #id_restaurante name="user_id" aria-label="Default select example">
+        <option selected>Restaurante</option>
+
+        @for (item of res; track $index) {
+        <option value="{{item.id_restaurante}}">{{item.nombre}}</option>
+        }
+      </select>
+
         <div>
           <label for="fecha">Fecha:</label>
-          <input type="date" formControlName="fecha" id="fecha" required>
+          <input type="date" #fecha_reserva formControlName="fecha" id="fecha" required>
         </div>
         <div>
           <label for="hora">Hora:</label>
-          <input type="time" formControlName="hora" id="hora" required>
+          <input type="time" #hora_reserva formControlName="hora" id="hora" required>
         </div>
         <div>
           <label for="numeroPersonas">Número de personas:</label>
-          <input type="number" formControlName="numeroPersonas" id="numeroPersonas" min="1" required>
+          <input type="number" #numero_personas formControlName="numeroPersonas" id="numeroPersonas" min="1" required>
         </div>
-        <button type="submit" >Reservar</button>
+        <button type="button" (click)="crearReserva(id_usuario, id_restaurante, fecha_reserva, hora_reserva, numero_personas)">Reservar</button>
     </form>  
 </body>
 </html>

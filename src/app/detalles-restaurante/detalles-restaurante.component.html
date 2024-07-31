@@ -1,1 +1,12 @@
-<p>detalles-restaurante works!</p>
+<h1>Detalles Restaurantes</h1>
+
+<div *ngIf="id">
+    <h2>Detalles del Restaurante {{id}}</h2>
+    <!-- Mostrar más detalles del rurante aquí -->
+  </div>
+
+  <div *ngFor="let detalle of detalles">
+    <h3>{{ detalle.nombre }}</h3>
+    <p>{{ detalle.descripcion }}</p>
+    <!-- otros campos -->
+  </div>

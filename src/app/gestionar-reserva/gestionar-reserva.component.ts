@@ -13,6 +13,7 @@ import { DatePipe } from '@angular/common';
 export class GestionarReservaComponent {
 
   reserva:any;
+  res:any;
 
   constructor(private serviciosService:ServiciosService) { }
 

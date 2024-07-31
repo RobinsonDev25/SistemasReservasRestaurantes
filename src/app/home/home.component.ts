@@ -1,6 +1,7 @@
+import { Router } from '@angular/router';
 import { ServiciosService } from './../servcios/servicios.service';
 import { Component } from '@angular/core';
-
+Router
 
 @Component({
   selector: 'app-home',
@@ -13,7 +14,8 @@ export class HomeComponent {
 
   datos:any;
 
-  constructor(private serviciosService:ServiciosService){}
+  constructor(private serviciosService:ServiciosService,
+              private router:Router){}
 
   ngOnInit() {
     this.getRestaurantes()
@@ -29,6 +31,10 @@ export class HomeComponent {
             debugger
           }
         })
+  }
+
+  detalles(id:any){
+    this.router.navigateByUrl('/detalles',id)
   }
 
 }
